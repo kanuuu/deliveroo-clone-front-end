@@ -1,38 +1,229 @@
+body {
+  font-family: sans-serif;
+  background: #f2f5f5;
+  box-sizing: border-box;
+}
 .App {
+  max-width: 100vw;
+  height: 100vh;
+}
+img {
+  object-fit: cover;
+  object-position: center;
+}
+.loading-screen {
   text-align: center;
+  margin-top: 50vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-branding {
+  height: 60px;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  color: green;
+  border-bottom: 1px solid #f2f5f5;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.branding-title {
+  margin-left: 9.25%;
+  font-weight: bold;
+  font-size: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-rest {
+  background: white;
+  height: 200px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+.header-left {
+  width: 60%;
+  margin-left: 4%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 20px;
+}
+.main-card {
+  width: 60%;
+  margin-left: 7%;
+  margin-bottom: 40px;
+}
+.section-container {
+  display: flex;
+}
+.categories {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.cat-bg {
+  padding: 20px;
+  width: 100%;
+}
+.rest-title {
+  font-size: 34px;
+  margin-bottom: 15px;
+  margin-left: 7%;
+}
+.rest-desc {
+  margin-left: 7%;
+  color: grey;
+  font-size: 16px;
+}
+.header-image {
+  height: 200px;
+  width: 30%;
+  border-radius: 10px;
+}
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cat-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.sub-cats {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.cart {
+  position: sticky;
+  height: 30%;
+  width: 30%;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  right: 70px;
+  margin-top: 30px;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.cart-items {
+  border-bottom: 2px solid#f2f5f5;
+}
+.cart-element {
+  margin-bottom: 30px;
+}
+.total-price {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.total-no-fee,
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  font-weight: bold;
+}
+.empty {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 14px;
+  color: grey;
 }
-
-.App-link {
-  color: #61dafb;
+.shipping {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f2f5f5;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.validate-cart {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border: none;
+  background: lightblue;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn-disabled {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgb(123, 147, 155);
+  cursor: not-allowed;
+}
+.validate-cart:hover {
+  background: rgb(65, 179, 217);
+}
+.minus-one,
+.add-one {
+  border-radius: 50%;
+  background: none;
+  border: 2px solid lightgreen;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.minus-one:hover,
+.add-one:hover {
+  background: lightgreen;
+}
+.item {
+  width: 40%;
+  height: 125px;
+  background: white;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.item:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.128);
+}
+.item-display {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.item-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.item-desc {
+  overflow: hidden;
+  font-size: 14px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  /* flex-wrap: wrap; */
+}
+.card-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-image {
+  height: 100%;
+  width: 40%;
+  margin-left: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+.item-popular {
+  color: orange;
+}
+.card-footer {
+  display: flex;
+  justify-self: flex-end;
+  gap: 25px;
 }
