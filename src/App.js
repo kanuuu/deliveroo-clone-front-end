@@ -12,7 +12,9 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await axios.get(process.env.REACT_APP_SERVER_NAME);
+    const response = await axios.get(
+      process.env.REACT_APP_SERVER_NAME || netlifyConfig.build.environment
+    );
     setIsLoading(false);
     setData(response.data);
   };
